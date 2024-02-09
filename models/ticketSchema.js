@@ -7,6 +7,18 @@ const ticketSchema = new Schema(
       type: String,
       required: true,
     },
+    nombre: {
+      type: String,
+      required: true,
+    },
+    apellidos: {
+      type: String,
+      required: true,
+    },
+    carrera: {
+      type: String,
+      required: true,
+    },
   },
   {
     timestamps: true,
@@ -15,4 +27,3 @@ const ticketSchema = new Schema(
 );
 
 module.exports = mongoose.model('Ticket', ticketSchema);
-
