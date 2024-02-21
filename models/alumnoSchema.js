@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const ticketSchema = new Schema(
+const alumnoSchema = new Schema(
   {
     matricula: {
       type: String,
@@ -11,13 +11,21 @@ const ticketSchema = new Schema(
       type: String,
       required: true,
     },
-    apellidos: {
+    a_paterno: {
+      type: String,
+      required: true,
+    },
+    a_materno: {
       type: String,
       required: true,
     },
     carrera: {
       type: String,
       required: true,
+    },
+    asist: {
+      type: Boolean,
+      default: true,
     },
   },
   {
@@ -26,4 +34,4 @@ const ticketSchema = new Schema(
   }
 );
 
-module.exports = mongoose.model('Ticket', ticketSchema);
+module.exports = mongoose.model('Alumno', alumnoSchema);
